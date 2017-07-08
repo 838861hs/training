@@ -66,6 +66,16 @@ main .main_visual .slide_nav .next{
   margin-bottom: 20px;
   font-size: 30px;
 }
+.about_box h2:before,
+.about_box h2:after{
+  content:"";
+  display:inline-block;
+  width:100px;
+  height:1px;
+  margin:0 3rem;
+  background-color: #fff;
+  vertical-align: middle;
+}
 .about_box .text{
   line-height: 30px;
   font-size: 18px;
