@@ -5,10 +5,9 @@ $(function(){
     var index = $(this).parent('li').index();
     $('.tab_name li').eq(index).addClass('active');
 //映像の切り替え
-$('.content_box li a img').removeClass('active');
-   $('.content_box li').each(function(){
-    $(this).find('img').eq(index).addClass('active')
-   });
-
+  var current_id = $(this).parent('li').attr('id');
+  console.log(current_id);
+  $('.photo_content').removeClass('active');
+  $('.'+current_id).addClass('active');
   });
 });

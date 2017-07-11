@@ -103,34 +103,36 @@ main .main_visual .slide_nav .next{
   background: #333;
   color: #fff;
 }
-.tab_box .content_box{
+.tab_box .photo_content{
+  display: none;
   overflow: hidden;
+  opacity: 0;
+  transition: opacity 1s linear 0;
 }
-.tab_box .content_box li{
+.tab_box .photo_content.active{
+  opacity: 1;
+  display: block;
+}
+.tab_box .photo_content .photo_box{
   width: 30%;
   margin-right: 5%;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   float: left;
 }
-.tab_box .content_box li:nth-child(3n){
-    margin-right: 0;
+
+
+
+
+
+
+
+.tab_box .photo_content .photo_box:nth-child(3n){
+  margin-right: 0;
 }
-.tab_box .content_box li a{
-  display: block;
-  position: relative;
-  height: 30vh;
-  max-width: 300px;
-}
-.tab_box .content_box li a img{
+.tab_box .photo_content .photo_box img{
   width: 100%;
-  transition: .3s;
-  opacity: 0;
-  position: absolute;
 }
-.tab_box .content_box li a img.active{
-  opacity: 1;
-  transition: 1s;
-}
+
 
 
 
@@ -145,7 +147,6 @@ main .main_visual .slide_nav .next{
   font-size: 30px;
 }
 .contact_box{
-  width: 960px;
   margin: 0 auto;
 }
 .contact_box h2{
