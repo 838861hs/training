@@ -103,32 +103,50 @@ main .main_visual .slide_nav .next{
   background: #333;
   color: #fff;
 }
-.tab_box .content_box{
+.tab_box .photo_content{
+  display: none;
   overflow: hidden;
+  opacity: 0;
+  transition: opacity 1s linear 0;
 }
-.tab_box .content_box li{
-  width: 30%;
-  margin-right: 5%;
-  margin-bottom: 40px;
-  float: left;
-}
-.tab_box .content_box li:nth-child(3n){
-    margin-right: 0;
-}
-.tab_box .content_box li a{
+.tab_box .photo_content.active{
+  opacity: 1;
   display: block;
 }
-.tab_box .content_box li a img{
+.tab_box .photo_content .photo_box{
+  width: 30%;
+  margin-right: 5%;
+  margin-bottom: 30px;
+  float: left;
+}
+
+
+
+
+
+
+
+.tab_box .photo_content .photo_box:nth-child(3n){
+  margin-right: 0;
+}
+.tab_box .photo_content .photo_box img{
   width: 100%;
 }
+
+
+
+
+
+
+
+
+
 .tab_box .more{
-  width: 960px;
   margin: 0 auto 50px;
   text-align: right;
   font-size: 30px;
 }
 .contact_box{
-  width: 960px;
   margin: 0 auto;
 }
 .contact_box h2{

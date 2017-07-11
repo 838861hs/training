@@ -5,6 +5,11 @@
   <title>first_issue</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
 </head>
 <body>
 <header>
@@ -31,20 +36,54 @@
     <div class="contents_inner">
       <div class="tab_box">
         <ul class="tab_name">
-          <li class="active"><a href="#">All</a></li>
-          <li><a href="#">ACTION</a></li>
-          <li><a href="#">SF</a></li>
-          <li><a href="#">ROMANCE</a></li>
-          <li><a href="#">COMEDY</a></li>
+          <li id="all" class="active"><a href="javascript:void(0)">All</a></li>
+          <li id="action"><a href="javascript:void(0)">ACTION</a></li>
+          <li id="sf"><a href="javascript:void(0)">SF</a></li>
+          <li id="romance"><a href="javascript:void(0)">ROMANCE</a></li>
+          <li id="comedy"><a href="javascript:void(0)">COMEDY</a></li>
         </ul><!-- tab_tag -->
-        <ul class="content_box">
-          <li><a href="#"><img src="img/film1.jpg" alt=""></a></li>
-          <li><a href="#"><img src="img/film2.jpg" alt=""></a></li>
-          <li><a href="#"><img src="img/film3.jpg" alt=""></a></li>
-          <li><a href="#"><img src="img/film4.jpg" alt=""></a></li>
-          <li><a href="#"><img src="img/film5.jpg" alt=""></a></li>
-          <li><a href="#"><img src="img/film6.jpg" alt=""></a></li>
-        </ul><!-- content_box -->
+
+        <div class="photo_content all active">
+           <div class="photo_box"><img src="img/film1.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/film2.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/film3.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/film4.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/film5.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/film6.jpg" alt=""></div>   
+        </div>
+        <div class="photo_content action">
+           <div class="photo_box"><img src="img/action.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/action.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/action.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/action.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/action.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/action.jpg" alt=""></div>   
+        </div>
+        <div class="photo_content sf">
+           <div class="photo_box"><img src="img/sf.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/sf.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/sf.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/sf.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/sf.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/sf.jpg" alt=""></div>   
+        </div>
+        <div class="photo_content romance">
+           <div class="photo_box"><img src="img/romance.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/romance.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/romance.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/romance.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/romance.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/romance.jpg" alt=""></div>   
+        </div>
+        <div class="photo_content comedy">
+           <div class="photo_box"><img src="img/comedy.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/comedy.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/comedy.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/comedy.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/comedy.jpg" alt=""></div>
+           <div class="photo_box"><img src="img/comedy.jpg" alt=""></div>   
+        </div>
+
         <p class="more"><a href="#">more</a></p>
       </div><!-- tab_box -->
       <div class="contact_box">
