@@ -1,13 +1,10 @@
 $(function(){
 var slider_parts = {
+  $bg_box:$('.bg_box'),
   $mv_bg:$('.mv_bg'),
   $prev :$('.prev'),
   $next :$('.next'),
   current_index: 0,
-//背景画像の横並び
-  bg_horizontal: $('.mv_bg').each(function(i){$(this).css({left: 100 *  i + '%'}); }),
-//次の背景に移動
-  goNext: function(index){$('.bg_box').animate({left: -100 * index + '%'}) },
 }
 
 
@@ -15,22 +12,20 @@ var slider_parts = {
 slider_parts.nextMove = function(){
     if (slider_parts.current_index == 2) {
       slider_parts.current_index = 0;
-      slider_parts.goNext(slider_parts.current_index);
+      slider_parts.$bg_box.css('right',slider_parts.current_index * 100 + '%');
     }else{
          slider_parts.current_index++;
-         slider_parts.goNext(slider_parts.current_index);
-         console.log(slider_parts.current_index)
+         slider_parts.$bg_box.css('right',slider_parts.current_index * 100 + '%');
       }
 }
 
 slider_parts.prevMove = function(){
     if (slider_parts.current_index == 0) {
       slider_parts.current_index = 2;
-      slider_parts.goNext(slider_parts.current_index);
+      slider_parts.$bg_box.css('right',slider_parts.current_index * 100 + '%');
     }else{
          slider_parts.current_index--;
-         slider_parts.goNext(slider_parts.current_index);
-         console.log(slider_parts.current_index)
+         slider_parts.$bg_box.css('right',slider_parts.current_index * 100 + '%');
       }
 }
 
