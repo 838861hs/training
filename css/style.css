@@ -50,10 +50,12 @@ main .main_visual .bg_box{
   transition: .5s;
   right: 0;
 }
-main .main_visual .bg_box .second{
+main .main_visual .bg_box .second,
+main .add_carousel .bg_box .second{
   right: -100%;
 }
-main .main_visual .bg_box .third{
+main .main_visual .bg_box .third,
+main .add_carousel .bg_box .third{
   right: -200%;
 }
 
@@ -224,6 +226,46 @@ main .main_visual .slide_nav .next{
 }
 .contact_box .buttons li:last-child{
   float: right;
+}
+
+.add_carousel{
+  height: 180px;
+  position: relative;
+  margin-bottom: 130px;
+}
+.add_carousel .bg_box{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.add_carousel .bg_box .mv_bg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.add_carousel .bg_box .mv_bg.first{
+  background-image: url(../img/banner1.jpg);
+}
+.add_carousel .bg_box .mv_bg.second{
+  background-image: url(../img/banner2.jpg);
+}
+.add_carousel .bg_box .mv_bg.third{
+  background-image: url(../img/banner3.jpg);
+}
+.add_carousel .slide_nav{
+  position: absolute;
+  width: 100%;
+}
+.add_carousel .slide_nav .prev,
+.add_carousel .slide_nav .next{
+  position: absolute;
+  top: 70px;
+}
+.add_carousel .slide_nav .prev{
+  left: 20px;
+}
+.add_carousel .slide_nav .next{
+  right: 20px;
 }
 footer{
   background: #333;
