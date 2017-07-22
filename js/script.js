@@ -1,4 +1,5 @@
 $(function(){
+
 var slider_parts = {
   $bg_box:$('.bg_box'),
   $mv_bg:$('.mv_bg'),
@@ -43,6 +44,23 @@ slider_parts.handleEvent = function() {
 
 slider_parts.handleEvent();
 
+=======
+//headerの変数と関数
+var $header = $('header');
+
+  function show_header(i){
+    if (640 < i){
+      $header.css('position','fixed');
+      $header.css('top','0');
+    }else{
+      $header.css('position','absolute');
+    }
+  }
+//スクロール量での分岐
+$(window).scroll(function(){
+  var top = $(this).scrollTop();
+  show_header(top);
+});
   $('.tab_name li a').on('click',function(){
 //タブのアクティブ
   $('.tab_name li').removeClass('active');
@@ -57,4 +75,8 @@ slider_parts.handleEvent();
 
 
 
+
 });
+
+});
+
