@@ -34,12 +34,44 @@ header .h_nav li a{
   color: #fff;
   font-size: 20px;
 }
+main{
+  overflow: hidden;
+}
 main .main_visual{
   height: 680px;
-  background-image: url(../img/main_visual_bg_1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+}
+main .main_visual .bg_box{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: .5s;
+  right: 0;
+}
+main .main_visual .bg_box .second{
+  right: -100%;
+}
+main .main_visual .bg_box .third{
+  right: -200%;
+}
+
+main .main_visual .mv_bg{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+main .main_visual .mv_bg.first{
+    background-image: url(../img/main_visual_bg_1.jpg);
+}
+main .main_visual .second{
+  background-image: url(../img/main_visual_bg_2.png);
+}
+main .main_visual .third{
+  background-image: url(../img/main_visual_bg_3.jpg);
 }
 main .main_visual .slide_nav{
   position: absolute;
