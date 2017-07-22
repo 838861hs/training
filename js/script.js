@@ -44,7 +44,6 @@ slider_parts.handleEvent = function() {
 
 slider_parts.handleEvent();
 
-=======
 //headerの変数と関数
 var $header = $('header');
 
@@ -61,6 +60,7 @@ $(window).scroll(function(){
   var top = $(this).scrollTop();
   show_header(top);
 });
+
   $('.tab_name li a').on('click',function(){
 //タブのアクティブ
   $('.tab_name li').removeClass('active');
@@ -78,5 +78,4 @@ $(window).scroll(function(){
 
 });
 
-});
 
