@@ -43,6 +43,7 @@ main .main_visual{
   background-repeat: no-repeat;
   position: relative;
 }
+main .add_carousel .bg_box,
 main .main_visual .bg_box{
   width: 100%;
   height: 100%;
@@ -50,12 +51,11 @@ main .main_visual .bg_box{
   transition: .5s;
   right: 0;
 }
-main .main_visual .bg_box .second,
-main .add_carousel .bg_box .second{
+
+main .main_visual .bg_box .second{
   right: -100%;
 }
-main .main_visual .bg_box .third,
-main .add_carousel .bg_box .third{
+main .main_visual .bg_box .third{
   right: -200%;
 }
 
@@ -242,15 +242,19 @@ main .main_visual .slide_nav .next{
   width: 100%;
   height: 100%;
   position: absolute;
+  background-size: cover;
 }
 .add_carousel .bg_box .mv_bg.first{
   background-image: url(../img/banner1.jpg);
+  right: 0%;
 }
 .add_carousel .bg_box .mv_bg.second{
   background-image: url(../img/banner2.jpg);
+  right: -100%;
 }
 .add_carousel .bg_box .mv_bg.third{
   background-image: url(../img/banner3.jpg);
+  right: -200%;
 }
 .add_carousel .slide_nav{
   position: absolute;
