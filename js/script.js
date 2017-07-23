@@ -1,48 +1,99 @@
 $(function(){
 
-var slider_parts = {
-  $bg_box:$('.bg_box'),
-  $mv_bg:$('.mv_bg'),
-  $prev :$('.prev'),
-  $next :$('.next'),
-  current_index: 0,
+function slider(el){
+  this.$root =$(el);
+  this.$mv_bg = this.$root.find('.mv_bg');
+  this.$prev = this.$root.find('.prev');
+  this.$next = this.$root.find('.next');
+  this.$bg_box= this.$root.find('.bg_box');
+  this.current_index = 0;
+  this.handleEvent();
+  this.nextInterval();
 }
 
+slider.prototype.nextInterval = function(){
+  var self = this;
+  setInterval(function(){ self.nextMove() }, 3000);
+}
 
-//次をクリックした
-slider_parts.nextMove = function(){
-    if (slider_parts.current_index == 2) {
-      slider_parts.current_index = 0;
-      slider_parts.$bg_box.css('right',slider_parts.current_index * 100 + '%');
+slider.prototype.handleEvent = function(){
+  var self = this;
+
+  this.$next.on('click', function(){
+  self.nextMove();
+  });
+
+  this.$prev.on('click', function(){
+  self.prevMove();
+  });
+}
+
+slider.prototype.nextMove = function(){
+  console.log('success')
+    if (this.current_index == 2) {
+      this.current_index = 0;
+      this.$bg_box.css('right',this.current_index * 100 + '%');
     }else{
-         slider_parts.current_index++;
-         slider_parts.$bg_box.css('right',slider_parts.current_index * 100 + '%');
+         this.current_index++;
+         this.$bg_box.css('right',this.current_index * 100 + '%');
       }
 }
 
-slider_parts.prevMove = function(){
-    if (slider_parts.current_index == 0) {
-      slider_parts.current_index = 2;
-      slider_parts.$bg_box.css('right',slider_parts.current_index * 100 + '%');
+slider.prototype.prevMove = function(){
+    if (this.current_index == 0) {
+      this.current_index = 2;
+      this.$bg_box.css('right',this.current_index * 100 + '%');
     }else{
-         slider_parts.current_index--;
-         slider_parts.$bg_box.css('right',slider_parts.current_index * 100 + '%');
+         this.current_index--;
+         this.$bg_box.css('right',this.current_index * 100 + '%');
       }
 }
 
-slider_parts.handleEvent = function() {
-    var self = this;
-    
-    this.$next.on('click', function(){
-        self.nextMove();
-    });
-    
-    this.$prev.on('click', function(){
-        self.prevMove();
-    });
-}
+new slider('.main_visual');
+new slider('.add_carousel');
+// var slider_parts = {
+//   $bg_box:$('.bg_box'),
+//   $mv_bg:$('.mv_bg'),
+//   $prev :$('.prev'),
+//   $next :$('.next'),
+//   current_index: 0,
+// }
 
-slider_parts.handleEvent();
+
+// //次をクリックした
+// slider_parts.nextMove = function(){
+//     if (slider_parts.current_index == 2) {
+//       slider_parts.current_index = 0;
+//       slider_parts.$bg_box.css('right',slider_parts.current_index * 100 + '%');
+//     }else{
+//          slider_parts.current_index++;
+//          slider_parts.$bg_box.css('right',slider_parts.current_index * 100 + '%');
+//       }
+// }
+
+// slider_parts.prevMove = function(){
+//     if (slider_parts.current_index == 0) {
+//       slider_parts.current_index = 2;
+//       slider_parts.$bg_box.css('right',slider_parts.current_index * 100 + '%');
+//     }else{
+//          slider_parts.current_index--;
+//          slider_parts.$bg_box.css('right',slider_parts.current_index * 100 + '%');
+//       }
+// }
+
+// slider_parts.handleEvent = function() {
+//     var self = this;
+    
+//     this.$next.on('click', function(){
+//         self.nextMove();
+//     });
+    
+//     this.$prev.on('click', function(){
+//         self.prevMove();
+//     });
+// }
+
+// slider_parts.handleEvent();
 
 //headerの変数と関数
 var $header = $('header');
