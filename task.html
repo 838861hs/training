@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>task_list</title>
+  <style>
+    .done_task li{
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="input_box">
+    <input class="inputed_text" type="text">
+    <button class="input_btn">入力</button>
+  </div><!-- input_box -->
+  <div class="task_box">
+    <p>残タスク</p>
+    <ul class="doing_task">
+
+    </ul>
+  </div><!-- task_box -->
+  <div class="finish_task">
+    <p>完了タスク</p>
+    <ul class="done_task">
+
+    </ul><!-- done_task -->
+  </div>
+</div><!-- wrapper -->
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<script>
+  $(function(){
+
+    var $inputed_text = $('.inputed_text');
+    var $input_btn = $('.input_btn');
+    var $doing_task = $('.doing_task');
+
+
+        function add_task(){
+          $input_btn.on('click',function(){
+          var inputed_text = $inputed_text.val();
+
+            if (inputed_text == 0) { return }
+            $doing_task.append('<li>' + $inputed_text.val() + '<input class="task" type="checkbox"></li>');
+            $test = $()
+         });
+        }
+        function task_done(){
+          $(document).on('change', '.task', function(){
+            var done = $(this).parent('li');
+            $(this).remove();
+            $('.finish_task').append(done);
+            $('.finish_task li').css('text-decoration','line-through');
+
+          });
+        }
+task_done();
+add_task();
+
+
+  });
+</script>
+</body>
+</html>
