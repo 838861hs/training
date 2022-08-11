@@ -4,3 +4,43 @@
   list-style: none;
   text-decoration: none;
 }
+
+header {
+  background-color: #eee;
+  border-bottom: 1px solid #999;
+  h1 {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+nav {
+  background-color: #eee;
+  border-bottom: 1px solid #999;
+  ul {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    border: 1px solid #999;
+    border-top: none;
+    border-bottom: none;
+    li {
+      width: 25%;
+      text-align: center;
+      border-right: 1px solid #999;
+      &:last-child {
+        border-right: none;
+      }
+      a {
+        display: block;
+        padding: 10px;
+        color: #000;
+        transition: background-color 0.5s, color 0.5s;
+        &:hover {
+          background: #999;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
