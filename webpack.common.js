@@ -42,7 +42,7 @@ module.exports = (outputFile) => ({
       },
       {
         //sassの設定
-        test: /\.scss$/,
+        test: /\.scss|css$/,
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader",

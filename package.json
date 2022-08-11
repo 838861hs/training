@@ -36,7 +36,9 @@
     "webpack-merge": "^5.8.0",
     "webpack-watched-glob-entries-plugin": "^2.2.4"
   },
-  "dependencies": {},
+  "dependencies": {
+    "swiper": "^8.3.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/838861hs/training.git"
