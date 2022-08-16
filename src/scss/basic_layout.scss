@@ -302,7 +302,6 @@ main {
       }
     }
   }
-
   .sec5 {
     text-align: center;
     &__title {
@@ -350,6 +349,40 @@ main {
       &__item {
         margin-top: 10px;
         font-size: 18px;
+      }
+    }
+  }
+  .sec6 {
+    background-color: #444;
+    text-align: center;
+    color: #fff;
+    margin-top: 100px;
+    padding: 50px 0;
+    &__title {
+      font-size: 30px;
+    }
+    &__list {
+      text-align: left;
+      list-style: circle;
+      width: 500px;
+      margin: 20px auto 0;
+      font-size: 20px;
+    }
+    &__contact {
+      &-box {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-around;
+      }
+      &__tel {
+        width: 40%;
+        padding: 10px 0 10px;
+        border: 1px dotted #fff;
+      }
+      &__form {
+        padding: 10px 0 10px;
+        width: 40%;
+        border: 1px dotted #fff;
       }
     }
   }
