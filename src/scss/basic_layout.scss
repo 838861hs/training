@@ -353,7 +353,7 @@ main {
     }
   }
   .sec6 {
-    background-color: #444;
+    background-color: #999;
     text-align: center;
     color: #fff;
     margin-top: 100px;
@@ -385,5 +385,41 @@ main {
         border: 1px dotted #fff;
       }
     }
+  }
+}
+.footer {
+  padding: 20px 0;
+  &__inner {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  &__wrap {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    margin-right: 10%;
+    width: 100px;
+    height: 100px;
+    display: grid;
+    color: #fff;
+    place-items: center;
+    background-color: #999;
+  }
+  &__address {
+    &__place {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    &__tel {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+  &__copyright {
+    color: #fff;
+    background-color: #999;
+    margin-top: 20px;
+    padding-left: 10px;
   }
 }
