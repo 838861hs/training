@@ -53,11 +53,6 @@ main {
       }
     }
     &__works {
-      &-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
       &-item {
         width: 30%;
         display: block;
@@ -109,11 +104,6 @@ main {
       }
     }
     &__works {
-      &-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
       &-item {
         width: 30%;
         display: block;
