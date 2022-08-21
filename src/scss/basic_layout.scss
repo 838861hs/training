@@ -14,6 +14,9 @@ header {
 nav {
   background-color: #eee;
   border-bottom: 1px solid #999;
+  @media screen and (max-width: var.$pc) {
+    display: none;
+  }
   ul {
     max-width: var.$innerWidth;
     margin: 0 auto;
@@ -123,16 +126,28 @@ main {
       display: flex;
       justify-content: space-between;
       position: relative;
+      @media screen and (max-width: var.$pc) {
+        display: block;
+      }
       &.content-box1 {
         margin-bottom: 50px;
+        @media screen and (max-width: var.$pc) {
+          margin-bottom: 30px;
+        }
       }
       &.content-box2 {
         flex-direction: row-reverse;
-        .sec4__content {
+        @media screen and (max-width: var.$pc) {
+          flex-direction: column;
+        }
+        & .sec4__content {
           &-text-box {
             position: relative;
             box-sizing: border-box;
             padding-left: 50px;
+            @media screen and (max-width: var.$pc) {
+              padding-left: 0;
+            }
           }
           &-text {
             margin-top: 30px;
@@ -142,6 +157,9 @@ main {
     }
     &__content-image {
       width: 48%;
+      @media screen and (max-width: var.$pc) {
+        width: 100%;
+      }
       img {
         width: 100%;
       }
@@ -151,6 +169,9 @@ main {
         padding-top: 50px;
         position: relative;
         width: 48%;
+        @media screen and (max-width: var.$pc) {
+          width: 100%;
+        }
       }
       &-title {
         font-size: 30px;
@@ -169,6 +190,13 @@ main {
         left: 0;
         font-size: 18px;
         padding: 5px 20px;
+        @media screen and (max-width: var.$pc) {
+          position: relative;
+          left: 0;
+          right: 0;
+          margin: 20px auto 0;
+          width: 50%;
+        }
       }
     }
   }
@@ -183,9 +211,20 @@ main {
     }
     &__news-list {
       margin: 0 auto;
+      @media screen and (max-width: var.$pc) {
+        text-align: left;
+      }
       &__item {
         margin-top: 10px;
         font-size: 18px;
+        @media screen and (max-width: var.$pc) {
+          margin-top: 30px;
+        }
+        & span {
+          @media screen and (max-width: var.$pc) {
+            display: block;
+          }
+        }
       }
     }
   }

@@ -1,3 +1,4 @@
+@use "./variable.scss" as var;
 /* reset*/
 * {
   padding: 0;
@@ -56,5 +57,10 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    li {
+      @media screen and (max-width: var.$pc) {
+        width: 48%;
+      }
+    }
   }
 }
