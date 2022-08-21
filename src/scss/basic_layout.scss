@@ -1,3 +1,4 @@
+@use "./scss_modules/variable" as var;
 @use "./scss_modules/layout.scss";
 @use "./scss_modules/button.scss";
 
@@ -5,7 +6,7 @@ header {
   background-color: #eee;
   border-bottom: 1px solid #999;
   h1 {
-    max-width: 1200px;
+    max-width: var.$innerWidth;
     margin: 0 auto;
   }
 }
@@ -14,7 +15,7 @@ nav {
   background-color: #eee;
   border-bottom: 1px solid #999;
   ul {
-    max-width: 1200px;
+    max-width: var.$innerWidth;
     margin: 0 auto;
     display: flex;
     border: 1px solid #999;
@@ -227,7 +228,7 @@ main {
   padding: 20px 0;
   overflow: hidden;
   &__inner {
-    width: 1200px;
+    width: var.$innerWidth;
     margin: 0 auto;
   }
   &__wrap {
