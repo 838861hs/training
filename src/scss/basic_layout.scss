@@ -46,7 +46,9 @@ nav {
   background-color: #eee;
   border-bottom: 1px solid #999;
   @media screen and (max-width: var.$pc) {
-    display: none;
+    // display: none;
+    border: none;
+    width: 100%;
   }
   ul {
     max-width: var.$innerWidth;
@@ -55,6 +57,19 @@ nav {
     border: 1px solid #999;
     border-top: none;
     border-bottom: none;
+    @media screen and (max-width: var.$pc) {
+      display: block;
+      border: none;
+      position: absolute;
+      background-color: #999;
+      width: 100%;
+      transition: top 0.4s;
+      z-index: 9;
+      top: -100%;
+      &.active {
+        top: 0;
+      }
+    }
     li {
       width: 25%;
       text-align: center;
@@ -62,14 +77,25 @@ nav {
       &:last-child {
         border-right: none;
       }
+      @media screen and (max-width: var.$pc) {
+        width: 100%;
+      }
       a {
         display: block;
         padding: 10px;
         color: #000;
         transition: background-color 0.5s, color 0.5s;
+        @media screen and (max-width: var.$pc) {
+          border-bottom: 1px solid #fff;
+          color: #fff;
+        }
         &:hover {
           background: #999;
           color: #fff;
+          @media screen and (max-width: var.$pc) {
+            background-color: #fff;
+            color: #999;
+          }
         }
       }
     }
